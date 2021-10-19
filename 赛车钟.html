@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>闪电钟</title>
+<meta charset="utf-8">
+</head>
+<body style="background-color: #083466;">
+	<center><h1 style="color: #f098fa;font-weight: bolder;font-size: 70px;font-family: 'Sedgwick Ave Display', cursive;">彩虹钟</h1>
+	</center>
+	<!-- http://i1.hdslb.com/bfs/archive/8774e4ee5aaf02a1d8b31f75e183a91f325ec044.jpg -->
+<div style="border-bottom: 2px solid red;">
+<img id="cat" style="width: 250px;height: 150px;clip-path: inset(15px 15px 15px 5px);
+" src="data:image/jpg;base64,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">
+
+</div>
+<button id="pfather" style="border-radius: 60px;border:2px solid blue;color: blue;
+margin-left: 108px;font-size: 22px;margin-top: 20px;"><span id="percent">0</span>%
+</button>
+<center>
+	
+
+	<p>
+		<button style="color: #f098fa;font-weight: bolder;font-size: 70px;font-family: 'Bitter', serif;border:2px solid white;background-color: #4c5192;" id="btnAdd">  +  </button>
+		
+		<span style="color: #f098fa;font-weight: bolder;font-size: 70px;font-family: 'Bitter', serif;margin-left: 30px;margin-right: 30px;"> <span id="minute">25</span>:<span id="second">00</span>
+
+	</span>
+
+		<button style="color: #f098fa;font-weight: bolder;font-size: 70px;font-family: 'Bitter', serif;border:2px solid white;background-color: #4c5192;" id="btnSub">  -  </button>
+	
+	</p>
+	
+
+<button id="start" style="background-color: #083466;width: 225px;height: 120px;border-radius: 60px;border-color: #083466;border:2px solid blue;font-size: 30px;color: blue;">开始/暂停</button>
+</center>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script type="text/javascript">
+	var defaultMin=25;
+	var defaultSec=0;
+	var flag = 1;
+	var session = defaultMin;
+	var breaklength = 5;
+	var sec = defaultSec;
+
+
+	var percent = 0;
+
+	$("#minute").html(session);
+
+	$("#second").html(sec>=10?""+sec:"0"+sec);
+	var run = function(){
+		if (flag==2) {
+			sec = sec - 1;
+			if (sec<0) {
+				sec= 59;
+				session= session - 1;
+			}
+			if (session<0) {
+				alert("时间到");
+				flag=1;
+				session = defaultMin;
+				sec = defaultSec;
+			}
+			$("#minute").html(session);
+			$("#second").html(sec>=10?""+sec:"0"+sec);
+			percent=1-(session*60+sec)/(defaultMin*60+defaultSec);
+			percent=parseInt(percent*100);
+			$("#percent").html(percent);
+			$("#cat").css({"margin-left":percent+"%"});
+			$("#pfather").css({"margin-left":4.5+percent+"%"});
+	    }
+	}
+    setInterval(run,1000)
+	$("#start").click(
+		function(){
+			if (flag==1) {flag=2;}
+			else if (flag==2) {flag=1;}
+
+		}
+	);
+
+   $("#btnAdd").click(function(){
+		defaultMin=defaultMin + 1;
+		defaultSec=0;
+		flag=1;
+		session = defaultMin;
+		sec = defaultSec;
+		$("#minute").html(session);
+		$("#second").html(sec>=10?""+sec:"0"+sec);
+   })
+
+   $("#btnSub").click(function(){
+		defaultMin=defaultMin - 1;
+		defaultSec=0;
+		flag=1;
+		session = defaultMin;
+		sec = defaultSec;
+		$("#minute").html(session);
+		$("#second").html(sec>=10?""+sec:"0"+sec);
+   })
+
+</script>
+</body>
+</html>
